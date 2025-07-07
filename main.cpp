@@ -3,6 +3,8 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 
+#include <imgui.h>
+
 static SDL_Window *window;
 static SDL_Renderer *renderer;
 
