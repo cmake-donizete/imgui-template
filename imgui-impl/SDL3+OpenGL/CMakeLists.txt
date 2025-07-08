@@ -6,11 +6,13 @@ set(BACKEND_SOURCE
 
 set(BACKEND_HEADERS ${IMGUI_SOURCE_DIR}/backends)
 
-add_library(sdl3-opengl STATIC ${BACKEND_SOURCE})
-target_include_directories(sdl3-opengl PUBLIC ${BACKEND_HEADERS})
+add_library(imgui-impl STATIC imgui-impl.cpp ${BACKEND_SOURCE})
+target_include_directories(imgui-impl PUBLIC ${BACKEND_HEADERS})
+
 target_link_libraries(
-    sdl3-opengl
+    imgui-impl
     PUBLIC
-    imgui
+    imgui-source
+    imgui-header
     SDL3::SDL3
     OpenGL::GL)
