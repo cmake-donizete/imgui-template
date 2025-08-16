@@ -6,4 +6,4 @@
 [submodule "external/imgui"]
 	path = external/imgui
 	url = https://github.com/ocornut/imgui.git
-	release = 5290bb036c206e117ff8d8e627f9b28acf1671e4
+	branch = master
